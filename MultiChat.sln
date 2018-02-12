@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiChatClient", "MultiChatClient\MultiChatClient.csproj", "{585D3C08-1729-41BD-9279-03060303D0AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiChatServer", "MultiChatServer\MultiChatServer.csproj", "{439E23FD-B76A-44FF-83C6-DC351ED3D48D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinForm", "WinForm", "{AA60F5BC-524E-470D-98ED-248AF5871F74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{71F1EFAB-514F-4C93-9219-8E9AA561A2D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JS.ChatApp.ChatServer", "JS.ChatApp.ChatServer\JS.ChatApp.ChatServer.csproj", "{A989E6AA-1784-41BE-AB1A-45F9C0A77DD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JS.ChatAPP.Resource", "JS.ChatAPP.Resource\JS.ChatAPP.Resource.csproj", "{E62BB1D5-5EAE-43CF-A695-AC134E7964FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +29,25 @@ Global
 		{439E23FD-B76A-44FF-83C6-DC351ED3D48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{439E23FD-B76A-44FF-83C6-DC351ED3D48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{439E23FD-B76A-44FF-83C6-DC351ED3D48D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A989E6AA-1784-41BE-AB1A-45F9C0A77DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A989E6AA-1784-41BE-AB1A-45F9C0A77DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A989E6AA-1784-41BE-AB1A-45F9C0A77DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A989E6AA-1784-41BE-AB1A-45F9C0A77DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E62BB1D5-5EAE-43CF-A695-AC134E7964FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62BB1D5-5EAE-43CF-A695-AC134E7964FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62BB1D5-5EAE-43CF-A695-AC134E7964FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62BB1D5-5EAE-43CF-A695-AC134E7964FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{585D3C08-1729-41BD-9279-03060303D0AB} = {AA60F5BC-524E-470D-98ED-248AF5871F74}
+		{439E23FD-B76A-44FF-83C6-DC351ED3D48D} = {AA60F5BC-524E-470D-98ED-248AF5871F74}
+		{A989E6AA-1784-41BE-AB1A-45F9C0A77DD5} = {71F1EFAB-514F-4C93-9219-8E9AA561A2D2}
+		{E62BB1D5-5EAE-43CF-A695-AC134E7964FC} = {71F1EFAB-514F-4C93-9219-8E9AA561A2D2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E18FF591-6A23-4529-9F0A-F014B49182CD}
 	EndGlobalSection
 EndGlobal
