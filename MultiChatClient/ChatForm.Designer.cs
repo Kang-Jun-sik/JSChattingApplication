@@ -72,8 +72,9 @@
             this.txtTTS.Margin = new System.Windows.Forms.Padding(4, 2, 3, 3);
             this.txtTTS.MaxLength = 260;
             this.txtTTS.Name = "txtTTS";
-            this.txtTTS.Size = new System.Drawing.Size(361, 32);
+            this.txtTTS.Size = new System.Drawing.Size(361, 27);
             this.txtTTS.TabIndex = 7;
+            this.txtTTS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTTS_KeyDown);
             // 
             // lblTTS
             // 
@@ -107,8 +108,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 2, 3, 3);
             this.txtAddress.MaxLength = 260;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.ReadOnly = true;
-            this.txtAddress.Size = new System.Drawing.Size(161, 32);
+            this.txtAddress.Size = new System.Drawing.Size(161, 27);
             this.txtAddress.TabIndex = 1;
             // 
             // btnConnect
@@ -133,6 +133,7 @@
             this.txtHistory.Multiline = true;
             this.txtHistory.Name = "txtHistory";
             this.txtHistory.ReadOnly = true;
+            this.txtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtHistory.Size = new System.Drawing.Size(562, 355);
             this.txtHistory.TabIndex = 5;
             // 
@@ -167,7 +168,7 @@
             this.txtPort.Margin = new System.Windows.Forms.Padding(4, 2, 3, 3);
             this.txtPort.MaxLength = 5;
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(93, 32);
+            this.txtPort.Size = new System.Drawing.Size(93, 27);
             this.txtPort.TabIndex = 3;
             // 
             // ChatForm

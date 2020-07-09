@@ -139,5 +139,44 @@ namespace MultiChatClient {
             AppendText(txtHistory, string.Format("[보냄]{0}: {1}", addr, tts));
             txtTTS.Clear();
         }
+
+        private void txtTTS_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // 서버가 대기중인지 확인한다.
+                if (!mainSock.IsBound)
+                {
+                    MsgBoxHelper.Warn("서버가 실행되고 있지 않습니다!");
+                    return;
+                }
+
+                // 보낼 텍스트
+                string tts = txtTTS.Text.Trim();
+                if (string.IsNullOrEmpty(tts))
+                {
+                    MsgBoxHelper.Warn("텍스트가 입력되지 않았습니다!");
+                    txtTTS.Focus();
+                    return;
+                }
+
+                // 서버 ip 주소와 메세지를 담도록 만든다.
+                IPEndPoint ip = (IPEndPoint)mainSock.LocalEndPoint;
+                string addr = ip.Address.ToString();
+
+                // 문자열을 utf8 형식의 바이트로 변환한다.
+                byte[] bDts = Encoding.UTF8.GetBytes(addr + '\x01' + tts);
+
+                // 서버에 전송한다.
+                mainSock.Send(bDts);
+
+                // 전송 완료 후 텍스트박스에 추가하고, 원래의 내용은 지운다.
+                AppendText(txtHistory, string.Format("[보냄]{0}: {1}", addr, tts));
+                txtTTS.Clear();
+                
+                txtHistory.SelectionStart = txtHistory.Text.Length;
+                txtHistory.ScrollToCaret();
+            }
+        }
     }
 }
